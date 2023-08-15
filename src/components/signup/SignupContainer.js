@@ -14,20 +14,23 @@ const SignupContainer = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/users/signup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
-          gym: gym,
-          email: email,
-          password: password,
-          passwordConfirm: passwordConfirm,
-        }),
-      });
+      const response = await fetch(
+        `https://kaizenflo-01afa622f2f4.herokuapp.com/api/users/signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: firstName,
+            lastName: lastName,
+            gym: gym,
+            email: email,
+            password: password,
+            passwordConfirm: passwordConfirm,
+          }),
+        }
+      );
       const responseData = await response.json();
       console.log(responseData);
       if (responseData.status === "error") {

@@ -11,17 +11,20 @@ const LoginContainer = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://kaizenflo-01afa622f2f4.herokuapp.com/api/users/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          credentials: "include",
+        }
+      );
       const responseData = await response.json();
       console.log(responseData);
 

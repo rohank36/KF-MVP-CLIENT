@@ -26,13 +26,16 @@ const Dashboard = () => {
 
   const getUser = async () => {
     try {
-      const response = await fetch(`/api/users/dashboard`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://kaizenflo-01afa622f2f4.herokuapp.com/api/users/dashboard`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       const resData = await response.json();
 
       if (resData.status === "fail") {
@@ -55,13 +58,16 @@ const Dashboard = () => {
 
   const getVideos = async () => {
     try {
-      const response = await fetch(`/api/videos/getUserVideos`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://kaizenflo-01afa622f2f4.herokuapp.com/api/videos/getUserVideos`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const resData = await response.json();
       if (resData.status === "success") {
