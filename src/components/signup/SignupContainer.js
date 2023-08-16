@@ -58,7 +58,7 @@ const SignupContainer = () => {
         }
       } else {
         localStorage.setItem("auth", true);
-        navigate("/login");
+        navigate("/dashboard");
       }
     } catch (err) {
       alert(err.message);
