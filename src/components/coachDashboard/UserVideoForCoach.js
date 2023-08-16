@@ -26,16 +26,19 @@ const UserVideoForCoach = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`/api/videos/coachDashboard`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          video_id: videoID,
-        }),
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://kaizenflo-01afa622f2f4.herokuapp.com/api/videos/coachDashboard`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            video_id: videoID,
+          }),
+          credentials: "include",
+        }
+      );
       const resData = await response.json();
       if (resData.status === "success") {
         sessionStorage.setItem("videoIDAuth", true);

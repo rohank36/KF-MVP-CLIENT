@@ -4,7 +4,7 @@ const redirectToDashboard = async (responseData) => {
   console.log(`USER ID: ${responseData.data.user._id}`);
   try {
     const response = await fetch(
-      `/api/users/dashboard/${responseData.data.user._id}`,
+      `https://kaizenflo-01afa622f2f4.herokuapp.com/api/users/dashboard/${responseData.data.user._id}`,
       {
         method: "GET",
         headers: {

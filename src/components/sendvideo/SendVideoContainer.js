@@ -29,15 +29,19 @@ const SendVideoContainer = () => {
     formData.append("video", fileInput.files[0]);
 
     try {
-      const response = await axios.post("/api/videos/sendUserVideo", formData, {
-        onUploadProgress: (progressEvent) => {
-          const percentCompleted = Math.round(
-            (progressEvent.loaded * 100) / progressEvent.total
-          );
-          setUploadPercentage(percentCompleted);
-        },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        "https://kaizenflo-01afa622f2f4.herokuapp.com/api/videos/sendUserVideo",
+        formData,
+        {
+          onUploadProgress: (progressEvent) => {
+            const percentCompleted = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            setUploadPercentage(percentCompleted);
+          },
+          withCredentials: true,
+        }
+      );
 
       const resData = response.data;
       console.log(resData);

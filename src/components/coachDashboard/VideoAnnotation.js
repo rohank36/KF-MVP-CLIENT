@@ -35,7 +35,7 @@ const VideoAnnotation = ({
 
     try {
       const response = await axios.post(
-        "/api/videos/sendCoachVideo",
+        "https://kaizenflo-01afa622f2f4.herokuapp.com/api/videos/sendCoachVideo",
         formData,
         {
           onUploadProgress: (progressEvent) => {
