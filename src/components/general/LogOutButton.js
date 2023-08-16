@@ -6,13 +6,16 @@ const LogOutButton = () => {
 
   const handleClick = async () => {
     try {
-      const response = await fetch("/api/users/logout", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://kaizenflo-01afa622f2f4.herokuapp.com/api/users/logout",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       const responseData = await response.json();
       if (responseData.status === "success") {
         localStorage.setItem("auth", false);
