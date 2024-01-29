@@ -1,6 +1,6 @@
 import React from "react";
 
-const link = "https://pages.viral-loops.com/kaizenflo-1-cj5wbbnw";
+const link = "https://docs.google.com/forms/d/e/1FAIpQLSdoE9NXcQaVn7LNaiZVB0I-lxkU1FXMgqhxJMRh9eyhrCM3Gw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link";
 
 const Description = () => {
   return (

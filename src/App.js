@@ -9,6 +9,7 @@ import Signup from "./pages/Signup";
 import SendVideoPage from "./pages/SendVideoPage";
 import CoachDashboard from "./pages/CoachDashboard";
 import CheckoutPage from "./pages/CheckoutPage";
+import Flow from "./pages/Flow";
 
 export const AuthContext = React.createContext();
 
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/sendvideo" element={<SendVideoPage />} />
             <Route path="/coachdashboard" element={<CoachDashboard />} />
+            <Route path="/flow" element={<Flow />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="*" element={<Landing />} />
           </Routes>
